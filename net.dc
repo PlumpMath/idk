@@ -1,0 +1,16 @@
+import DistributedToon
+
+
+dclass DistributedToon: DistributedSmoothNode {
+  setStanding(uint8 standing) broadcast ram required clsend;
+
+  loop(string animName) broadcast clsend;
+  stop() broadcast clsend;
+  pose(string animName, uint8 frame) broadcast clsend;
+  sendMsg(string msg) broadcast clsend;
+  setSpecies(string spcs) broadcast clsend;
+  updateName(string textEntered) broadcast clsend;
+  makeBot() broadcast clsend;
+  spawnBoss(string boss) broadcast clsend;
+  setSit() broadcast clsend;
+};
